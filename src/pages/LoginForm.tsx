@@ -6,6 +6,7 @@ import { InputPassword } from "../components/InputPassword";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import Button from "../components/Button";
 
 type FormData = {
     email: string;
@@ -46,6 +47,11 @@ export default function LoginForm() {
                     register={register}
                     error={errors.password?.message}
                 />
+                <Button
+                label="Login" // Label sebaiknya Register bukan login jika ini form register
+                variant="primary"
+                type="submit"    // Harus SUBMIT
+            />
                 <div>
                     Belum punya akun? <Link to="/register" className="hover:text-red-900">Daftar Disini</Link>
                 </div>

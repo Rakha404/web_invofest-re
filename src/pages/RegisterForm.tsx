@@ -6,6 +6,7 @@ import { TextArea } from "../components/TextArea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Link } from "react-router-dom";
+import Button from "../components/Button";
 
 type FormData = {
     nama: string;
@@ -85,8 +86,13 @@ export default function RegisterForm() {
                     ]}
                     error={errors.event?.message}
                 />
+                <Button 
+                label="Login"
+                variant="primary"
+                type="submit"
+            />
             </form>
-
+                
             <div className="mt-4">
                 Sudah punya akun? <Link to="/login" className="hover:text-red-900">Login Disini</Link>
             </div>
