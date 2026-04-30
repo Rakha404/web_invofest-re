@@ -69,7 +69,7 @@ export default function RegisterForm() {
                     error={errors.password_confirm?.message}
                 />
 
-                <TextArea 
+                <TextArea
                     label="Bio"
                     name="bio"
                     register={register}
@@ -86,13 +86,14 @@ export default function RegisterForm() {
                     ]}
                     error={errors.event?.message}
                 />
-                <Button 
-                label="Login"
-                variant="primary"
-                type="submit"
-            />
+                <Button
+                    label="Login"
+                    variant="primary"
+                    type="submit"
+                    className="mt-4"
+                />
             </form>
-                
+
             <div className="mt-4">
                 Sudah punya akun? <Link to="/login" className="hover:text-red-900">Login Disini</Link>
             </div>

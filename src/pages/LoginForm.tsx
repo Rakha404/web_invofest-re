@@ -34,7 +34,7 @@ export default function LoginForm() {
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
 
-                <InputText 
+                <InputText
                     label="Email"
                     nama="email"
                     register={register}
@@ -48,10 +48,10 @@ export default function LoginForm() {
                     error={errors.password?.message}
                 />
                 <Button
-                label="Login" // Label sebaiknya Register bukan login jika ini form register
-                variant="primary"
-                type="submit"    // Harus SUBMIT
-            />
+                    label="Login" // Label sebaiknya Register bukan login jika ini form register
+                    variant="primary"
+                    type="submit"    // Harus SUBMIT
+                />
                 <div>
                     Belum punya akun? <Link to="/register" className="hover:text-red-900">Daftar Disini</Link>
                 </div>
